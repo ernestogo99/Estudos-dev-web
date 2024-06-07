@@ -1,0 +1,1 @@
+select nome as "nome do aluno",idade as age,matriculado_em as mat from aluno

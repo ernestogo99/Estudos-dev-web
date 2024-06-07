@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "dist/js", //vai gerar em dist
+    "target": "ES6", // versao do ecmascript
+    "noEmitOnError": true, // não vai gerar um arquivo js , enquanto houver erros de compilação
+    "noImplicitAny": true
+  },
+  "include": ["app/**/*"] //vai ler em app
+}

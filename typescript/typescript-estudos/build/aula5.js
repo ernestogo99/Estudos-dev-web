@@ -1,0 +1,12 @@
+"use strict";
+let cursos = ["javascript", "typescript", "c++"];
+cursos.push("php");
+console.log(cursos);
+let valores = [10, 20, 2003];
+valores.push(555);
+console.log(valores);
+let teste;
+let qualquer_valor;
+teste = "bruno";
+teste = 2024;
+console.log(teste);
