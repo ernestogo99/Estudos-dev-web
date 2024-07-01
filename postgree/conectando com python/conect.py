@@ -4,7 +4,7 @@ import psycopg2.extras
 hostname = 'localhost'
 database = 'conect'
 username = 'postgres'
-pwd = 'curioso'
+pwd = '110102ee'
 port_id = '5432'
 conn=None
 cursor=None

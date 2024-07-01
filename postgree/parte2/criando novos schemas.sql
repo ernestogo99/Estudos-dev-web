@@ -1,5 +1,6 @@
+--schema
 
-create table aluno(
+create table academico.aluno(
 	id serial primary key,
 	primeiro_nome varchar(255) not null,
 	ultimo_nome varchar(255) not null,
@@ -7,23 +8,23 @@ create table aluno(
 );
 
 
-create table curso(
+create table academico.curso(
 	id serial primary key,
 	nome varchar(255) not null,
-	categoria_id integer not null references categoria(id)
+	categoria_id integer not null references academico.categoria(id)
 );
 
-create table categoria(
+create table academico.categoria(
 	id serial primary key,
 	nome varchar(255) not null
 )
 
 
-create table aluno_curso(
-	aluno_id integer not null references aluno(id),
-	curso_id integer not null references curso(id),
+create table academico.aluno_curso(
+	aluno_id integer not null references academico.aluno(id),
+	curso_id integer not null references academico.curso(id),
 	primary key(aluno_id,curso_id)
-);
+)
 
 
 create schema academico;
