@@ -25,6 +25,9 @@ CREATE or replace FUNCTION cria_instrutor_trigger() RETURNS trigger AS $$
 
         INSERT INTO log_instrutores (informacao) 
             VALUES (NEW.nome || ' recebe mais do que ' || percentual || '% da grade de instrutores');
+		
+		Return new;
+	
     END;
 $$ LANGUAGE plpgsql;
 

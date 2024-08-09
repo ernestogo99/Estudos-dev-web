@@ -41,14 +41,14 @@ const Editar_prof = () => {
         setAi(response.data.ai);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [id]);
 
   function handlesubmit(event) {
     const professoratualizado = { nome, curso, titulacao, ai };
     axios
       .put(`http://localhost:3001/professor/update/${id}`, professoratualizado)
       .then((response) => {
-        alert(`professor id ${response.data.id} atualizado`);
+        alert(`professor id ${response.data._id} atualizado`);
         navigate("/listarprofessor");
       })
       .catch((error) => console.log(error));

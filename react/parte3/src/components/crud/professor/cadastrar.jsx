@@ -29,7 +29,7 @@ const Cadastrar_prof = () => {
     axios
       .post("http://localhost:3001/professor/register", novoprofessor)
       .then((response) => {
-        alert(`professor id ${response.data.id} adicionado`);
+        alert(`professor id ${response.data._id} adicionado`);
         navigate("/listarprofessor");
       })
       .catch((error) => console.log(error));

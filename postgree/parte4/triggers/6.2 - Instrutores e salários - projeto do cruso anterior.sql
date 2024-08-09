@@ -11,7 +11,7 @@ CREATE TABLE log_instrutores (
 );
 
 
-CREATE FUNCTION cria_instrutor(nome_instrutor VARCHAR, salario_instrutor DECIMAL) RETURNS void AS $$ 
+CREATE or replace FUNCTION cria_instrutor(nome_instrutor VARCHAR, salario_instrutor DECIMAL) RETURNS void AS $$ 
     DECLARE
         id_instrutor_inserido INTEGER;
         media_salarial DECIMAL;
@@ -24,6 +24,7 @@ CREATE FUNCTION cria_instrutor(nome_instrutor VARCHAR, salario_instrutor DECIMAL
 
         SELECT AVG(instrutor.salario) INTO media_salarial FROM instrutor WHERE id <> id_instrutor_inserido;
 
+   	
         IF salario_instrutor > media_salarial THEN
             INSERT INTO log_instrutores (informacao) VALUES (nome_instrutor || ' recebe acima da média');
         END IF;
@@ -40,6 +41,7 @@ CREATE FUNCTION cria_instrutor(nome_instrutor VARCHAR, salario_instrutor DECIMAL
 
         INSERT INTO log_instrutores (informacao) 
             VALUES (nome_instrutor || ' recebe mais do que ' || percentual || '% da grade de instrutores');
+		
     END;
 $$ LANGUAGE plpgsql;
 
@@ -53,3 +55,7 @@ SELECT * FROM log_instrutores;
 SELECT cria_instrutor('Outro instrutora', 400);
 
 SELECT * FROM log_instrutores;
+
+BEGIN;
+insert into instrutor(nome,salario) values ('ronaldo',800);
+ROLLBACK;

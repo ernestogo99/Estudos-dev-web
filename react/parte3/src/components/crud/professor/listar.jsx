@@ -47,7 +47,7 @@ const Listar_prof = () => {
         .delete(`http://localhost:3001/professor/delete/${id}`)
         .then((response) => {
           const resultado = professores.filter(
-            (professor) => professor.id != id
+            (professor) => professor._id != id
           );
           setprofessores(resultado);
         })
@@ -73,8 +73,8 @@ const Listar_prof = () => {
           <TableBody>
             {professores.map((professor) => {
               return (
-                <StyledTableRow key={professor.id}>
-                  <StyledTableCell>{professor.id}</StyledTableCell>
+                <StyledTableRow key={professor._id}>
+                  <StyledTableCell>{professor._id}</StyledTableCell>
                   <StyledTableCell>{professor.nome}</StyledTableCell>
                   <StyledTableCell>{professor.curso}</StyledTableCell>
                   <StyledTableCell>{professor.titulacao}</StyledTableCell>
@@ -84,13 +84,13 @@ const Listar_prof = () => {
                         component={Link}
                         aria-label="edit"
                         color="primary"
-                        to={`/editarprofessor/${professor.id}`}
+                        to={`/editarprofessor/${professor._id}`}
                       >
                         <Editicon />
                       </IconButton>
                       <IconButton
                         onClick={() => {
-                          deleprofessorbyid(professor.id);
+                          deleprofessorbyid(professor._id);
                         }}
                         aria-label="delete"
                         color="error"
