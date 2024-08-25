@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-300 dark:bg-gray-800">
+    <div class="container mx-auto px-4 py-8 space-y-8">
+      <div>
+        <h6 class="font-bold mb-2 dark:text-white">Componente dropdow</h6>
+        <div class="space-y-1">
+          <button
+            class="bg-blue-400 flex items-center px-4 py-2 rounded text-black shadow hover:bg-blue-700"
+          >
+            botão do dropdow
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 ml-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </button>
+
+          <div
+            class="bg-white border absolute hidden flex flex-col px-3 border-gray-300 inline py-1 shadow-md rounded-md"
+          >
+            <a href="" class="w-full">link 1</a>
+            <a href="" class="w-full">link 2</a>
+            <a href="" class="w-full">link 3</a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h6 class="font-bold mb-2 dark:text-white">Componente input</h6>
+        <input
+          type="text"
+          placeholder="digite seu nome"
+          class="bg-gray-50 border w-full placeholder-blue-600 focus:outline-none border-gray-300 rounded px-2 py-1 text-sm text-gray-700"
+        />
+        <input
+          type="text"
+          placeholder="digite seu nome"
+          class="bg-gray-50 border w-full placeholder-blue-600 focus:outline-none border-gray-300 rounded px-2 py-1 text-sm text-gray-700"
+        />
+      </div>
+
+      <div>
+        <h6 class="font-bold mb-2 dark:text-white">Componente badge</h6>
+
+        <div
+          class="inline-flex items-center text-sm bg-green-100 px-1.5 py-0.5 rounded-md text-green-800 font-medium"
+        >
+          Ativo
+        </div>
+
+        <div class="relative inline-block">
+          <button
+            class="relative bg-blue-500 text-white px-4 py-2 rounded-full"
+          >
+            Mensagens
+          </button>
+          <span
+            class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full"
+            >5</span
+          >
+        </div>
+      </div>
+
+      <div>
+        <h6 class="font-bold mb-2 dark:text-white">Componente button</h6>
+        <button
+          class="bg-blue-400 px-4 py-2 rounded text-white shadow hover:bg-blue-700"
+        >
+          SAVE
+        </button>
+        <button
+          class="text-base px-4 py-2 bg-cyan-700 hover:bg-cyan-400 shadow"
+        >
+          Save
+        </button>
+      </div>
+
+      <h6 class="font-bold mb-2 dark:text-white">Componente card</h6>
+
+      <div
+        class="bg-white rounded-lg dark:bg-gray-700 shadow-md overflow-hidden"
+      >
+        <div
+          class="w-full bg-gray-100 dark:bg-gray-900 border-b p-4 border-gray-100"
+        >
+          <h4 class="text-center font-semibold dark:text-gray-100">
+            titulo do card
+          </h4>
+        </div>
+
+        <p class="p-4 dark:text-white">
+          O rato roeu a roupa do rei de roma
+          kfeoaokefokfaekofaefokeakfoeafaekofekao
+        </p>
+
+        <div class="w-full p-3 bg-gray-200 border-t p-4 border-gray-200">
+          Rodape
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
